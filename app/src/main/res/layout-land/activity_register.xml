@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@drawable/billiard3">
+
+
+    <TextView
+        android:id="@+id/registrationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/registration"
+        android:alpha="0.5"
+        android:background="#f8fafa"
+        android:textSize="17sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/nameAndemailLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_margin2"
+        android:layout_below="@+id/registrationTextView"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/userNameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:alpha="0.5"
+            android:background="#f8fafa"
+            android:ems="10"
+            android:layout_marginHorizontal="10dp"
+            android:hint="@string/user_name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/userEmailEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:padding="7dp"
+            android:alpha="0.5"
+            android:background="#f8fafa"
+            android:ems="10"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/passwordLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameAndemailLinear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_margin2"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:alpha="0.5"
+            android:background="#f8fafa"
+            android:layout_marginHorizontal="@dimen/default_margin"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/passwordConfirmEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:alpha="0.5"
+            android:background="#f8fafa"
+            android:layout_marginHorizontal="@dimen/default_margin"
+            android:ems="10"
+            android:hint="@string/password_again"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/phoneLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:background="#f8fafa"
+        android:layout_below="@+id/passwordLinear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_margin2">
+
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin2"
+            android:ems="10"
+            android:hint="@string/phone_number"
+            android:inputType="phone" />
+
+        <Spinner
+            android:id="@+id/phoneSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin2" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/accountTypeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneLinear"
+        android:layout_marginTop="@dimen/default_margin2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RadioButton
+                android:alpha="0.5"
+                android:background="#f8fafa"
+                android:id="@+id/buyerRadioButton"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="Vendég"/>
+
+            <RadioButton
+                android:alpha="0.5"
+                android:background="#f8fafa"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:text="Eladó"/>
+        </LinearLayout>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/addressEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin2"
+        android:layout_below="@+id/accountTypeGroup"
+        android:layout_marginHorizontal="120dp"
+        android:alpha="0.5"
+        android:background="#f8fafa"
+        android:padding="7dp"
+        android:maxLines="3"
+        android:ems="10"
+        android:hint="@string/address"
+        android:inputType="textMultiLine|textPostalAddress"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/addressEditText"
+        android:layout_marginTop="@dimen/default_margin2"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="register"
+            android:text="@string/registration"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:onClick="cancel"
+            tools:ignore="UsingOnClickInXml"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/book_button"
+        android:title="Foglalás"
+        app:showAsAction="ifRoom"
+        android:icon="@null"
+        />
+
+    <item
+        android:id="@+id/dates_button"
+        android:title="Foglalások"
+        app:showAsAction="ifRoom"
+        android:icon="@null"
+        />
+
+    <item
+        android:id="@+id/contact_button"
+        android:title="Elérhetőség"
+        app:showAsAction="never"
+        android:icon="@null"
+        />
+
+    <item
+        android:id="@+id/logout_button"
+        android:title="Kijelentkezés"
+        app:showAsAction="never"
+        android:icon="@null"
+        />
+
+</menu>
